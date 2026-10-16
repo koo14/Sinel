@@ -17,6 +17,9 @@ primary_region = "sin"
   HOST = "0.0.0.0"
   RUST_LOG = "sinel=info,warn"
   ALLOW_ALL_SIGNAL_SUBDOMAINS = "true"
+  ROOT_STATUS_CODE = "404" # Allowed values: "302" (redirect) | "404" (Not Found).
+  REDIRECT_URL = "https://www.google.com" # Target URL when ROOT_STATUS_CODE is "302"
+  STATE_PATH = "/state" # Custom path for dashboard (default: /state)
 
 [[services]]
   internal_port = 8080
